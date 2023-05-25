@@ -1,0 +1,17 @@
+
+.dateLabel {
+    padding-right: 10px;
+}
+#locationInput {
+margin-bottom: 10px;
+}
+#previewMap {
+    margin-top: 40px;
+    margin-left: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 20px;
+
+    
+    
+}
