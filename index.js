@@ -6,6 +6,6 @@ previewMap.addEventListener("click", (e) => {
 })
 
 locationInput.addEventListener("input", (e) => {
-    console.log("Tell me Your Location!")
+    // console.log("Tell me Your!")
 })
 
