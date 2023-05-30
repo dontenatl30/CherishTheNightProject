@@ -14,12 +14,12 @@
     
 }
 
-.container-2 {
+/* .container-2 {
     position: relative;
     width: 100%;
     height: 100%; 
     transition: 1s;
-}
+} */
 
 .dateLabel {
     padding-right: 10px;
@@ -59,12 +59,8 @@ margin-bottom: 10px;
     display: none;
 } 
 
-.kawasaki-2:hover .topSpeed2-para2{
-    display: inline;
-   }
 
-
-.suzuki-2:hover {
+.suzuki:hover {
     transform: scale(2.5);
 }
 
@@ -74,4 +70,40 @@ margin-bottom: 10px;
 
 .topSpeed4-4 {
     display: none;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.image-container img{
+    flex: 0 0 100px;
+    margin: 5px;
+
+}
+
+.image-container div{
+    flex: 0 0 100px;
+    margin: 5px;
+    text-align: center;
+}
+
+.motorcycle-container {
+    flex: 1;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.HDavidson {
+    display: flex;
+    background-color: white;
+
+}
+
+.HDavidson img{
+    flex: 1;
+    background-color: white;
 }

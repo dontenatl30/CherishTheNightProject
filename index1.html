@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+    crossorigin="anonymous"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Project 101</title>
   </head>
   <body>
@@ -22,13 +22,13 @@
         "
       >
         <header>
-          <h1 class="cherish text-white text-center">
+          <h1 class="cherish text-danger text-center">
             The Faster and more Furious
           </h1>
         </header>
 
         <div class="container-3 text-center mt-5">
-          <div class="row row-cols-auto">
+          <div class="row row-cols-auto image-container">
             <img
               class="helmet"
               src="https://d1j5r50obvimnh.cloudfront.net/280/035-0880-1032-03.jpg"
@@ -187,8 +187,8 @@
 
       <div class="container-2 d-flex justify-content-evenly p-4 bg-dark">
 
-        <div class="harley d-flex flex-column justify-content-center">
-          <a href="index.html"
+        <div class="motorcycle-container d-flex flex-column justify-content-evenly">
+          <a href="index.html" class="HDavidson"
             ><img
               class="Harley-Davidson"
               src="https://www.webbikeworld.com/wp-content/uploads/2023/01/Davidson2-1521x760.jpg"
@@ -197,21 +197,23 @@
               width="200px"
             />
           </a>
+
           <div>
             <p
-              class="harley-davidson-1 text-white fw-bold text-center fs-3 mt-3"
-            >
+              class="harley-davidson-1 text-white fw-bold text-center fs-3">
               Harley-Davidson XLCH Sportster
             </p>
           </div>
-          <div class="topSpeed1-para1">
+
+          <!-- <div class="topSpeed1-para1">
             <p class="topSpeed1 text-danger fs-3 bg-white">
               Top Speed - 122 mph (196 km/h)
             </p>
-          </div>
+          </div> -->
+
         </div>
 
-        <div class="dropBox1 text-center">
+        <div class="motorcycle-container dropBox1 text-center">
           <p class="text-2 text-warning">Safety First</p>
           <form>
             <input
@@ -225,7 +227,7 @@
           </form>
         </div>
 
-        <div class="kawasaki-2 d-flex flex-column justify-content-center">
+        <div class="motorcycle-container d-flex flex-column justify-content-evenly">
           <a href="index.html"
             ><img
               class="kawasaki"
@@ -237,19 +239,20 @@
           </a>
 
           <div>
-            <p class="kawasaki-1 text-white fw-bold text-center fs-3 mt-3">
+            <p class="kawasaki-1 text-white fw-bold text-center fs-3">
               Kawasaki Ninja ZX-11
             </p>
           </div>
 
-          <div class="topSpeed2-para2">
+          <!-- <div class="topSpeed2-para2">
             <p class="topSpeed2 text-danger fs-3 bg-white">
               Top Speed - 169 - 176 mph (272 - 283 km/h)
             </p>
-          </div>
+          </div> -->
+
         </div>
 
-        <div class="dropBox2 text-center">
+        <div class="motorcycle-container dropBox2 text-center">
           <p class="text-3 text-warning">Have a Safe Journey</p>
           <form>
             <input
@@ -263,28 +266,28 @@
           </form>
         </div>
 
-        <div class="suzuki-1 d-flex flex-column justify-content-center">
+        <div class="motorcycle-container d-flex flex-column justify-content-center">
 
           <a href="index.html"
             ><img
-              class="suzuki-2"
+              class="suzuki"
               src="https://cdn-fastly.motorcycle.com/media/2023/03/30/11414896/suzuki-motorcycles.jpg?size=720x845&nocrop=1"
               alt="suzuki"
               height="200px"
               width="200px"
           ></a>
 
-          <div>
-            <p class="suziki-3 text-white fw-bold text-center fs-3 mt-3">
+          <!-- <div>
+            <p class="suziki-3 text-white fw-bold text-center fs-3">
               Suzuki Hayabusa (first generation)
             </p>
           </div>
           <div>
             <p class="topSpeed3-para3">Top Speed - 188 - 194 mph (303 - 312 km/h)</p>
-          </div>
+          </div> -->
         </div>
 
-        <div class="dropBox3 text-center">
+        <div class="motorcycle-container dropBox3 text-center">
           <p class="text-4 text-warning">Better to Play it Safe</p>
           <form>
             <input
@@ -298,8 +301,7 @@
           </form>
         </div>
 
-        <div class="ducati-2 d-flex flex-column justify-content-evenly">
-        <div>
+        <div class="motorcycle-container d-flex flex-column justify-content-evenly">
           <a href="index.html">
             <img
               class="ducati"
@@ -308,15 +310,15 @@
               height="200px"
               width="200px"
           /></a>
-        </div>
-          <div>
-            <p class="ducati-1 text-white fw-bold text-center fs-3 align-items-center mt-1">
+          <!-- <div>
+            <p class="ducati-1 text-white fw-bold text-center fs-3 align-items-center">
               Ducati Panigale R
             </p>
         </div>
+
             <div class="topSpeed4-4">
             <p class="topSpeed4-para4 text-white text-center">Top Speed - 202 mph (325 km/h)</p>
-            </div>
+            </div> -->
 
         </div>
 
