@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <h1>Cherish This Night</h1>
+      <h1>GitARound</h1>
     </header>
     <div class="container">
       <div id="hbMenu">
@@ -26,7 +26,7 @@
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasScrolling"
           aria-controls="offcanvasScrolling"
-        >Make me a Hamburger
+        >Take a Ride
         </button>
 
         <div
@@ -39,7 +39,7 @@
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
-              Look at the Stars
+              Where to?
             </h5>
             <button
               type="button"
@@ -49,20 +49,33 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <label for="location" class="location">Location</label>
-            <input class="form-control" id="locationInput" placeholder="Type to search...">
+            <label for="location" class="location">Start From</label>
+            <input class="form-control" id="startFromInput" placeholder="Type your location">
             <br>
-             <!--Date Selector Calendar--><div id="dateSelect"> 
-                    <label for="date" class="dateLabel">Date</label>
-                    <input type="date" id="dateSelect" min="1900-01-01" max="2023-12-31">
+            <label for="location" class="location">Destination</label>
+            <input class="form-control" id="destinationInput" placeholder="Type your destination">
+            <br>
+          <div id="currentTime"> 
+                    <label for="time" class="timeOfDay">Date</label>
+                    <input type="time" id="timeOfDay" min="01:00" max="24:00">
 
-            </div>
+             </div>
             <br>
             <br>
-             <label for="dedication" class="toggleSwitch">Add a Dedication (toggle)
-                <input type="checkbox">
-               
-              </label>
+            <h3>Fastest Route</h3>
+             <label for="dedication" class="toggleSwitch">
+                <label class="switch">
+                  <input type="checkbox" id="fastestSwitch">
+                  <span class="slider round"></span>
+                </label>
+                <br>
+                <br>
+                <h3>Safest Route</h3>
+             <label for="dedication" class="toggleSwitch">
+                <label class="switch">
+                  <input type="checkbox" id="safestSwitch">
+                  <span class="slider round"></span>
+                </label>
               <br>
               <button type="button" class="btn btn-info" id="previewMap">Preview Map</button>
           </div>
