@@ -13,6 +13,28 @@ h1 {
   margin-left: 30px;
 }
 
+.bg-image {
+    display: block;
+    width: 100%;
+}
+
+.bg-image {
+    background-size: cover;
+    min-height: 35vh;
+    
+}
+
+.cherish {
+    font-size: 100px;
+    
+}
+
+/* .container-2 {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    transition: 1s;
+} */
 
 .dateLabel {
     padding-right: 10px;
@@ -26,7 +48,81 @@ margin-bottom: 10px;
     padding-left: 60px;
     padding-right: 60px;
     border-radius: 20px;
+    
 }
+
+.helmet:hover {
+    transform: scale(1.5);
+}
+ 
+
+.Harley-Davidson:hover {
+ transform: scale(2.5);
+}
+
+
+.topSpeed1-para1 {
+    display: none;
+} 
+
+
+.kawasaki:hover {
+    transform: scale(2.5);
+}
+
+.topSpeed2-para2 {
+    display: none;
+} 
+
+
+.suzuki:hover {
+    transform: scale(2.5);
+}
+
+.ducati:hover {
+    transform: scale(2.0);
+}
+
+.topSpeed4-4 {
+    display: none;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.image-container img{
+    flex: 0 0 100px;
+    margin: 5px;
+
+}
+
+.image-container div{
+    flex: 0 0 100px;
+    margin: 5px;
+    text-align: center;
+}
+
+.motorcycle-container {
+    flex: 1;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.HDavidson {
+    display: flex;
+    background-color: white;
+
+}
+
+.HDavidson img{
+    flex: 1;
+    background-color: white;
+}
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -89,4 +185,3 @@ margin-bottom: 10px;
   .slider.round:before {
     border-radius: 50%;
   }
-
