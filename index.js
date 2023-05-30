@@ -8,9 +8,29 @@ const previewMap = document.getElementById("previewMap");
 
 
 
+let map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 33.748, lng: 84.387 },
+    zoom: 8,
+  });
+}
+
+
+
 startFromInput.addEventListener("keypress", (e) => {
-  console.log("Show location Map") //here we will need to write a function that will bring in location data when a user begins entering input
+  console.log("show your location") //here we will need to write a function that will bring in location data when a user begins entering input
 })
+
+
+
+
+
+
+
+
+
+
 
 destinationInput.addEventListener("keypress", (e) => {
   console.log("pull directions to map") //this event will pull direction info from API starting from the startFromInput event response
@@ -26,5 +46,11 @@ fastestSwitch.addEventListener("click", (e) => {
 
 
 safestSwitch.addEventListener("click", (e) => {
-  console.log("Avoid Highways, Avoid Construction, Avoid heavy traffic, avoid accidents")
+  window.initMap = initMap;("Avoid Highways, Avoid Construction, Avoid heavy traffic, avoid accidents")
 })
+
+previewMap.addEventListener("click", (e) => {
+  console.log("click for page 3")// This event will take user to page 3 of app
+})
+
+

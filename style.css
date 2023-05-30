@@ -1,3 +1,18 @@
+#map {
+  width: 700px;
+  height: 600px;
+  border: thin 2px;
+  margin-left: 35%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+.hbDropdown {
+  margin-left: 30px;
+}
+
 
 .dateLabel {
     padding-right: 10px;
@@ -74,3 +89,4 @@ margin-bottom: 10px;
   .slider.round:before {
     border-radius: 50%;
   }
+
