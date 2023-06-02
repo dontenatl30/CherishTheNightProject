@@ -11,8 +11,12 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
     <title>Frontend Project 101</title>
-    
+
   </head>
   <body>
     <header>
@@ -28,7 +32,22 @@
           aria-controls="offcanvasScrolling"
         >Take a Ride
         </button>
-
+        <div>
+        <div id="map">Map Goes Here 
+        </div>
+          <div id="container">
+            <div id="mapDirections"></div>
+            <div id="sidebar">
+              <p>Total Distance: <span id="total"></span></p>
+              <div id="panel"></div>
+            </div>
+          </div>
+ 
+  
+</head>
+<body>
+</body>
+</html>
         <div
           class="offcanvas offcanvas-start"
           data-bs-scroll="true"
@@ -37,10 +56,13 @@
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
         >
+        
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
               Where to?
             </h5>
+            <br>
+            <br>
             <button
               type="button"
               class="btn-close"
@@ -56,7 +78,7 @@
             <input class="form-control" id="destinationInput" placeholder="Type your destination">
             <br>
           <div id="currentTime"> 
-                    <label for="time" class="timeOfDay">Date</label>
+                    <label for="time" class="timeOfDay">Departure Time</label>
                     <input type="time" id="timeOfDay" min="01:00" max="24:00">
 
              </div>
@@ -77,17 +99,21 @@
                   <span class="slider round"></span>
                 </label>
               <br>
-              <button type="button" class="btn btn-info" id="previewMap">Preview Map</button>
+              <button type="button" class="btn btn-info" id="previewMap">Let's Go!</button>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="directions.js"></script>
     <script src="index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfQ3lVI4_5YkKo37XDNM9CB7IXzkg0jQw&callback=initMap">
+</script>
   </body>
 </html>
