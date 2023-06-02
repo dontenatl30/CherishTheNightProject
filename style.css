@@ -1,3 +1,39 @@
+/* body {
+    width: 100vw;
+    height: 100vh;
+} */
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container {
+    height: 100%;
+    display: flex;
+  }
+  
+  #sidebar {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30rem;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+#map {
+    width: 80%;
+    height: 100vh;
+    border: thin 2px;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    flex-basis: 0;
+    flex-grow: 4;
+  }
+
 .bg-image {
     display: block;
     width: 100%;
@@ -91,22 +127,16 @@ margin-bottom: 10px;
     text-align: center;
 }
 
-.motorcycle-container {
-    flex: 1;
-    min-width: 200px;
-    min-height: 200px;
-}
-
-.HDavidson {
+/* .HDavidson {
     display: flex;
     background-color: white;
 
-}
+} */
 
-.HDavidson img{
+/* .HDavidson img{
     flex: 1;
     background-color: white;
-}
+} */
 
 /* The switch - the box around the slider */
 .switch {
