@@ -1,3 +1,18 @@
+#map {
+  width: 700px;
+  height: 600px;
+  border: thin 2px;
+  margin-left: 35%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-left: 20px;
+}
+.hbDropdown {
+  margin-left: 30px;
+}
+
 /* body {
     width: 100vw;
     height: 100vh;
@@ -199,4 +214,30 @@ margin-bottom: 10px;
   
   .slider.round:before {
     border-radius: 50%;
+  
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #container {
+    height: 100%;
+    display: flex;
+  }
+  
+  #sidebar {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30rem;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+  
+  #mapDirections {
+    flex-basis: 0;
+    flex-grow: 4;
+    height: 100%;
   }
