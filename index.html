@@ -11,13 +11,18 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
     <title>Frontend Project 101</title>
-    
+
   </head>
   <body>
     <header>
       <h1>GitARound</h1>
     </header>
+    <div class="container">
       <div id="hbMenu">
         <button
           class="hbDropdown"
@@ -27,7 +32,22 @@
           aria-controls="offcanvasScrolling"
         >Take a Ride
         </button>
-        <div id="map">Map Goes Here</div>
+        <div>
+        <div id="map">Map Goes Here 
+        </div>
+          <div id="container">
+            <div id="mapDirections"></div>
+            <div id="sidebar">
+              <p>Total Distance: <span id="total"></span></p>
+              <div id="panel"></div>
+            </div>
+          </div>
+ 
+  
+</head>
+<body>
+</body>
+</html>
         <div
           class="offcanvas offcanvas-start"
           data-bs-scroll="true"
@@ -36,10 +56,13 @@
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
         >
+        
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
               Where to?
             </h5>
+            <br>
+            <br>
             <button
               type="button"
               class="btn-close"
