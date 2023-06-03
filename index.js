@@ -1,66 +1,120 @@
-function allowDrop(ev) {
-    ev.preventDefault();
-  }
+// const source = document.querySelector(".helmet");
+// const target = document.querySelector("#target");
+
+// // image.addEventListener('dragstart', dragStart);
+// // image.addEventListener('dragend',dragEnd)
+
+// source.addEventListener('dragstart', (e) => {
   
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
+// })
+
+
+
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: { lat: 37.0902, lng: -95.7129 }, // Centered on the USA.
+  });
+  const directionsService = new google.maps.DirectionsService();
+  const directionsRenderer = new google.maps.DirectionsRenderer({
+    map: map,
+    panel: document.getElementById("panel"),
+  });
+
+  directionsRenderer.addListener("directions_changed", () => {
+    const directions = directionsRenderer.getDirections();
+
+    if (directions) {
+      computeTotalDistance(directions);
+    }
+  });
+
+  // const startFromInput = document.getElementById("startFromInput");
+  // const destinationInput = document.getElementById("destinationInput");
+
+  let startHere = document.querySelector("#startFromInput"); //Event Listener
+  let endHere = document.querySelector("#destinationInput"); //Event Listener
+  let startLoc = "";
+  let endLoc = "";
+
+  startHere.addEventListener("input", (e) => {
+    startLoc = startHere.value;
+    console.log(startLoc);
+  });
+
+  endHere.addEventListener("input", (e) => {
+    endLoc = endHere.value;
+    console.log(endLoc);
+  });
+
+  const previewMap = document.getElementById("previewMap");
+
+  previewMap.addEventListener("click", (e) => {
+    displayRoute(startLoc, endLoc, directionsService, directionsRenderer);
+  });
+}
+
+let avoidHighways;
+let avoidTolls;
+let provideRouteAlternatives;
+let travelMode;
+
+
+function displayRoute(origin, destination, service, display) {
+  service.route({
+      origin: origin,
+      destination: destination,
+      travelMode: google.maps.TravelMode.DRIVING,
+      avoidHighways, 
+      avoidTolls,
+      provideRouteAlternatives,
+
+    })
+    .then((result) => {
+      display.setDirections(result);
+    })
+    .catch((e) => {
+      console.log("Could not display directions due to: " + e);
+    });
+}
+
+const fastestSwitch = document.querySelector("#fastestSwitch");
+
+fastestSwitch.addEventListener("change", function() {
+  if (fastestSwitch.checked) {
+    provideRouteAlternatives = true;
+  } else {
+    provideRouteAlternatives = false;
   }
-  
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+  console.log(provideRouteAlternatives)
+  });
+
+const safestSwitch = document.querySelector("#safestSwitch");
+
+safestSwitch.addEventListener("change", function() {
+if (safestSwitch.checked) {
+  avoidHighways = true; avoidTolls = true;
+} else {
+  avoidHighways = false; avoidTolls = false;
+}
+console.log(avoidHighways)
+});
+
+
+function computeTotalDistance(result) {
+  let total = 0;
+  const myroute = result.routes[0];
+
+  if (!myroute) {
+    return;
   }
 
+  for (let i = 0; i < myroute.legs.length; i++) {
+    total += myroute.legs[i].distance.value;
+  }
 
+  total = total / 1000;
+  document.getElementById("total").innerHTML = total + " km";
+}
 
-// const previewMap = document.getElementById("previewMap")
-// const locationInput=document.getElementById("locationInput")
-// const startFromInput = document.getElementById("startFromInput");
-// const destinationInput = document.getElementById("destinationInput");
-// const timeOfDay = document.getElementById("timeOfDay");
-// const fastestSwitch = document.getElementById("fastestSwitch");
-// const safestSwitch = document.getElementById("safestSwitch");
-
-
-
-
-// let map;
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById("map"), {
-//     center: { lat: 33.748, lng: 84.387 },
-//     zoom: 8,
-//   });
-// }
-
-
-
-// startFromInput.addEventListener("keypress", (e) => {
-//   console.log("show your location") //here we will need to write a function that will bring in location data when a user begins entering input
-// })
-
-// locationInput.addEventListener("input", (e) => {
-//     // console.log("Tell me Your!")
-// })
-// destinationInput.addEventListener("keypress", (e) => {
-//   console.log("pull directions to map") //this event will pull direction info from API starting from the startFromInput event response
-// })
-
-// timeOfDay.addEventListener("input", (e) => {
-//   console.log("departure time, time until arrival, arrival time") //This event will determine if a user is departing at current time or a future time. This will pull data based off of input selected. 
-// })
-
-// fastestSwitch.addEventListener("click", (e) => {  
-//   console.log("Show Shortest Distance, Avoid Construction, Avoid Police, Take Highway")
-// })//This event will filter data by shortest distance, construction, police presence, and highway routes
-
-
-// safestSwitch.addEventListener("click", (e) => {
-//   window.initMap = initMap;("Avoid Highways, Avoid Construction, Avoid heavy traffic, avoid accidents")
-// })
-
-// previewMap.addEventListener("click", (e) => {
-//   console.log("click for page 3")// This event will take user to page 3 of app
-// })
-
-
+window.initMap = initMap;

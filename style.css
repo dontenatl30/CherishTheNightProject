@@ -1,17 +1,36 @@
-#map {
+.map {
   width: 700px;
   height: 600px;
   border: thin 2px;
-  margin-left: 35%;
+  margin-left: 25%;
   margin-bottom: 20px;
 }
 
-h1 {
+/* h1 {
   margin-left: 20px;
-}
+} */
 .hbDropdown {
   margin-left: 30px;
 }
+
+.invisible {
+  display: none;
+}
+
+.helmet {
+  height:"100px";
+  width:"100px";
+  border-radius: 25%
+}
+/* #map {
+    width: 80%;
+    height: 100vh;
+    border: thin 2px;
+    margin-left: 25%;
+    margin-bottom: 50px;
+    flex-basis: 0;
+    flex-grow: 4;
+  } */
 
 .bg-image {
     display: block;
@@ -42,7 +61,7 @@ h1 {
 #locationInput {
 margin-bottom: 10px;
 }
-#previewMap {
+#previewMap, #return{
     margin-top: 40px;
     margin-left: 70px;
     padding-left: 60px;
@@ -106,22 +125,16 @@ margin-bottom: 10px;
     text-align: center;
 }
 
-.motorcycle-container {
-    flex: 1;
-    min-width: 200px;
-    min-height: 200px;
-}
-
-.HDavidson {
+/* .HDavidson {
     display: flex;
     background-color: white;
 
-}
+} */
 
-.HDavidson img{
+/* .HDavidson img{
     flex: 1;
     background-color: white;
-}
+} */
 
 /* The switch - the box around the slider */
 .switch {
@@ -186,18 +199,12 @@ margin-bottom: 10px;
     border-radius: 50%;
   }
   
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #container {
+  /* #container {
     height: 100%;
     display: flex;
-  }
+  } */
   
-  #sidebar {
+  /* #sidebar {
     flex-basis: 15rem;
     flex-grow: 1;
     padding: 1rem;
@@ -205,7 +212,7 @@ margin-bottom: 10px;
     height: 100%;
     box-sizing: border-box;
     overflow: auto;
-  }
+  } */
   
   #mapDirections {
     flex-basis: 0;

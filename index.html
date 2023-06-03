@@ -16,16 +16,15 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script type="module" src="./index.js"></script>
     <title>Frontend Project 101</title>
-
   </head>
-  <body>
+  <body class="body bg-">
     <header>
-      <h1>GitARound</h1>
+      <h1 class="git ms-5 text-dark">GitARound</h1>
     </header>
     <div class="container">
       <div id="hbMenu">
         <button
-          class="hbDropdown"
+          class=" btn btn-info hbDropdown"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasScrolling"
@@ -33,21 +32,18 @@
         >Take a Ride
         </button>
         <div>
-        <div id="map">Map Goes Here 
-        </div>
-          <div id="container">
-            <div id="mapDirections"></div>
+          <div class="container-fluid d-flex flex-row">
+        <div id="map" class="map">Map Goes Here</div>
+          <div class="container d-flex text-white">
+            <div id="map"></div>
             <div id="sidebar">
-              <p>Total Distance: <span id="total"></span></p>
-              <div id="panel"></div>
+              <!-- <p>Total Distance: <span id="total"></span></p> -->
+            <div id="panel" class="d-flex"></div>
             </div>
           </div>
- 
-  
-</head>
-<body>
-</body>
-</html>
+        </div>
+
+        <section class="theMap" ref="map"></section>
         <div
           class="offcanvas offcanvas-start"
           data-bs-scroll="true"
@@ -70,9 +66,13 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">
+          <div class="offcanvas-body" id="container">
+
             <label for="location" class="location">Start From</label>
             <input class="form-control" id="startFromInput" placeholder="Type your location">
+
+            <div>
+                <div>
             <br>
             <label for="location" class="location">Destination</label>
             <input class="form-control" id="destinationInput" placeholder="Type your destination">
@@ -99,13 +99,17 @@
                   <span class="slider round"></span>
                 </label>
               <br>
-              <button type="button" class="btn btn-info" id="previewMap">Let's Go!</button>
+              <button type="button" class="btn btn-info" id="previewMap">Preview Map</button>
+              <br>
+              <a class="btn btn-info text-center" href="index1.html" role="button" id="return">Return</a>
           </div>
         </div>
+        <a class="btn btn-info text-center" href="index3.html" role="button" id="return">Let's Go!</a>
+          </div>
       </div>
     </div>
 
-    <script src="directions.js"></script>
+    <!-- <script src="directions.js"></script> -->
     <script src="index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
