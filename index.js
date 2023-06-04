@@ -1,14 +1,32 @@
-// const source = document.querySelector(".helmet");
-// const target = document.querySelector("#target");
+//https://codepen.io/Amr_Saker/pen/NWKgxLv
 
-// // image.addEventListener('dragstart', dragStart);
-// // image.addEventListener('dragend',dragEnd)
+// let helmet;
+// let image = document.getElementsByClassName(".helmet");
 
-// source.addEventListener('dragstart', (e) => {
-  
-// })
+// function allowDrop(eve) {
+//     eve.preventDefault() ;
+// }
+// function DragStart(eve) {
+//   image = eve.target.class ;
+// }
 
+// function drop(eve){
+//     eve.target.append(document.querySelector(".dropzone"))
+// }
 
+let myId;
+let x = document.getElementById(myId);
+
+function allowDrop(eve) {
+  eve.preventDefault();
+}
+function DragStart(eve) {
+  myId = eve.target.id;
+}
+
+function drop(eve) {
+  eve.target.append(document.getElementById(myId));
+}
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -59,16 +77,15 @@ let avoidTolls;
 let provideRouteAlternatives;
 let travelMode;
 
-
 function displayRoute(origin, destination, service, display) {
-  service.route({
+  service
+    .route({
       origin: origin,
       destination: destination,
       travelMode: google.maps.TravelMode.DRIVING,
-      avoidHighways, 
+      avoidHighways,
       avoidTolls,
       provideRouteAlternatives,
-
     })
     .then((result) => {
       display.setDirections(result);
@@ -78,28 +95,29 @@ function displayRoute(origin, destination, service, display) {
     });
 }
 
-const fastestSwitch = document.querySelector("#fastestSwitch");
+const fastestSwitch = document.getElementById("fastestSwitch");
 
-fastestSwitch.addEventListener("change", function() {
+fastestSwitch.addEventListener("change", function () {
   if (fastestSwitch.checked) {
     provideRouteAlternatives = true;
   } else {
     provideRouteAlternatives = false;
   }
-  console.log(provideRouteAlternatives)
-  });
-
-const safestSwitch = document.querySelector("#safestSwitch");
-
-safestSwitch.addEventListener("change", function() {
-if (safestSwitch.checked) {
-  avoidHighways = true; avoidTolls = true;
-} else {
-  avoidHighways = false; avoidTolls = false;
-}
-console.log(avoidHighways)
+  console.log(provideRouteAlternatives);
 });
 
+const safestSwitch = document.getElementById("safestSwitch");
+
+safestSwitch.addEventListener("change", function () {
+  if (safestSwitch.checked) {
+    avoidHighways = true;
+    avoidTolls = true;
+  } else {
+    avoidHighways = false;
+    avoidTolls = false;
+  }
+  console.log(avoidHighways);
+});
 
 function computeTotalDistance(result) {
   let total = 0;

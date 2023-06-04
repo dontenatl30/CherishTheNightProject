@@ -1,10 +1,10 @@
-.map {
+/* .map {
   width: 700px;
   height: 600px;
   border: thin 2px;
   margin-left: 25%;
   margin-bottom: 20px;
-}
+} */
 
 /* h1 {
   margin-left: 20px;
@@ -74,9 +74,15 @@ margin-bottom: 10px;
     transform: scale(1.5);
 }
  
+.target.over {
+  cursor: move;
+  border: 20px dotted #666;
+}
+
 
 .Harley-Davidson:hover {
- transform: scale(2.5);
+ transform: scale(1.5);
+ margin: 20px;
 }
 
 
@@ -86,7 +92,7 @@ margin-bottom: 10px;
 
 
 .kawasaki:hover {
-    transform: scale(2.5);
+    transform: scale(1.5);
 }
 
 .topSpeed2-para2 {
@@ -95,11 +101,11 @@ margin-bottom: 10px;
 
 
 .suzuki:hover {
-    transform: scale(2.5);
+    transform: scale(1.5);
 }
 
 .ducati:hover {
-    transform: scale(2.0);
+    transform: scale(1.5);
 }
 
 .topSpeed4-4 {
@@ -198,24 +204,34 @@ margin-bottom: 10px;
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .container-3 {
+    /* Prevent the user selecting text in the example */
+    user-select: none;
+  }
   
-  /* #container {
-    height: 100%;
-    display: flex;
+  #draggable {
+    text-align: center;
+    background: white;
+  }
+  
+  /* .dropzone {
+    width: 500px;
+    height: 300px;
+    background: white;
+    margin: 10px;
+    padding: 10px;
   } */
   
-  /* #sidebar {
-    flex-basis: 15rem;
-    flex-grow: 1;
-    padding: 1rem;
-    max-width: 30rem;
-    height: 100%;
-    box-sizing: border-box;
-    overflow: auto;
+  .dropzone.dragover {
+    background-color: purple;
+  }
+  
+  .dragging {
+    opacity: 0.5;
   } */
   
-  #mapDirections {
-    flex-basis: 0;
-    flex-grow: 4;
-    height: 100%;
+
+  .Directions {
+    color: red;
   }
