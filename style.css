@@ -20,8 +20,23 @@
 .helmet {
   height:"100px";
   width:"100px";
-  border-radius: 25%
+  border-radius: 35%
 }
+
+.tooltips-inner {
+  color: red;
+  font-size: larger;
+}
+
+/* .suzuki {
+  display: none;
+} */
+
+/* .tooltips {
+  height:"100px";
+  width:"100px";
+  border-radius: 35%
+} */
 /* #map {
     width: 80%;
     height: 100vh;
@@ -80,37 +95,10 @@ margin-bottom: 10px;
 }
 
 
-.Harley-Davidson:hover {
- transform: scale(1.5);
- margin: 20px;
-}
-
-
-.topSpeed1-para1 {
-    display: none;
-} 
-
-
-.kawasaki:hover {
+.motorcycle:hover {
     transform: scale(1.5);
 }
 
-.topSpeed2-para2 {
-    display: none;
-} 
-
-
-.suzuki:hover {
-    transform: scale(1.5);
-}
-
-.ducati:hover {
-    transform: scale(1.5);
-}
-
-.topSpeed4-4 {
-    display: none;
-}
 
 .image-container {
     display: flex;
@@ -205,7 +193,7 @@ margin-bottom: 10px;
     border-radius: 50%;
   }
 
-  .container-3 {
+  .suzuki {
     /* Prevent the user selecting text in the example */
     user-select: none;
   }
