@@ -112,13 +112,21 @@ function initMap() {
     }
   });
 
-  // const startFromInput = document.getElementById("startFromInput");
-  // const destinationInput = document.getElementById("destinationInput");
-
+  const startFromInput = document.getElementById("startFromInput");
+  const destinationInput = document.getElementById("destinationInput");
   let startHere = document.querySelector("#startFromInput"); //Event Listener
   let endHere = document.querySelector("#destinationInput"); //Event Listener
   let startLoc = "";
   let endLoc = "";
+  let clearAll = document.getElementById("clearAll");
+  let inputs = document.querySelectorAll("inputs");
+
+  // clearAll.addEventListener("click", (e)=> {
+  //   inputs.forEach(input => input.value = "")
+  // });
+
+
+
 
   startHere.addEventListener("input", (e) => {
     startLoc = startHere.value;
@@ -156,7 +164,7 @@ function displayRoute(origin, destination, service, display) {
       display.setDirections(result);
     })
     .catch((e) => {
-      console.log("Could not display directions due to: " + e);
+      console.log(e);
     });
 }
 
