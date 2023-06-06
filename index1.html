@@ -31,9 +31,10 @@
         <div class="container-3 text-center mt-5">
           <div class="row row-cols-auto image-container">
             <img
-              id="draggable"
+              id="donte"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/035-0880-1032-03.jpg"
               alt="donte's helmet"
               height="100px"
@@ -43,9 +44,10 @@
               <p class="suziki-1 text-white bg-dark fw-bold fs-5">Donte</p>
             </div>
             <img
-              id="draggable"
+              id="Eric"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/TL-109842001.jpg"
               alt="Eric's helmet"
               height="100px"
@@ -56,9 +58,10 @@
             </div>
 
             <img
-              id="draggable"
+              id="damian"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://www.revzilla.com/product_images/1568/6652/sedici_strada_ii_primo_americana_helmet_black_grey_300x300.jpg"
               alt="damian's helmet"
               height="100px"
@@ -69,9 +72,10 @@
             </div>
 
             <img
-              id="draggable"
+              id="erica"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/035-0856-1808-03.jpg"
               alt="erica's helmet"
               height="100px"
@@ -81,9 +85,10 @@
               <p class="erica-1 text-white bg-dark fw-bold fs-5">Erica</p>
             </div>
             <img
-              id="draggable"
+              id="ashleigh"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/035-0815-1338-03.jpg"
               alt="ashleigh's helmet"
               height="100px"
@@ -93,9 +98,10 @@
               <p class="ashleigh-1 text-white bg-dark fw-bold fs-5">Ashleigh</p>
             </div>
             <img
-              id="draggable"
+              id="cody"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/033-T12-3052.jpg"
               alt="cody's helmet"
               height="100px"
@@ -105,9 +111,10 @@
               <p class="cody-1 text-white bg-dark fw-bold fs-5">Cody</p>
             </div>
             <img
-              id="draggable"
+              id="gabriel"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/035-0875-1131-03.jpg"
               alt="gabriel's helmet"
               height="100px"
@@ -117,9 +124,10 @@
               <p class="gabriel-1 text-white bg-dark fw-bold fs-5">Gabriel</p>
             </div>
             <img
-              id="draggable"
+              id="miguel"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/131-M1013749.jpg"
               alt="miguel's helmet"
               height="100px"
@@ -129,9 +137,10 @@
               <p class="miguel-1 text-white bg-dark fw-bold fs-5">Miguel</p>
             </div>
             <img
-              id="draggable"
+              id="matthew"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/131-F1983207.jpg"
               alt="matthew's helmet"
               height="100px"
@@ -141,9 +150,10 @@
               <p class="matthew-1 text-white bg-dark fw-bold fs-5">Matthew</p>
             </div>
             <img
-              id="draggable"
+              id="matthew-r"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/033-35-3127.jpg"
               alt="matthew-r's helmet"
               height="100px"
@@ -158,6 +168,7 @@
               id="draggable"
               draggable="true"
               class="helmet"
+              ondragstart="DragStart(event)"
               src="https://d1j5r50obvimnh.cloudfront.net/280/483-0110-6705.jpg"
               alt="ron's"
               height="100px"
@@ -166,15 +177,20 @@
             <div>
               <p class="ron-1 text-white bg-dark fw-bold fs-5">Ron</p>
             </div>
+            
             <img
+              id="christopher"
+              class="helmet tooltips"
+             
+              data-bs-toggle="tooltip"
+              data-bs-placement="left" title="Cody and Eric said Hello!"
               draggable="true"
-              class="helmet"
               ondragstart="DragStart(event)"
-              src="https://d1j5r50obvimnh.cloudfront.net/280/613-19335-463-S.jpg"
+              src="https://m.media-amazon.com/images/I/71Uj-Cldp9L.__AC_SX300_SY300_QL70_FMwebp_.jpg"
               alt="christopher's helmet"
               height="100px"
               width="100px"
-              id="drag-element"
+              
             />
             <div>
               <p class="christopher-1 text-white bg-dark fw-bold fs-5">
@@ -194,8 +210,9 @@
         <div class="dropzone" id="droptarget"> -->
       </div>
 
-      <div class="d-flex justify-content-evenly p-4 bg-dark pb-5">
-        <div class="d-flex flex-column align-items-center">
+      <div class="cycle-container d-flex flex-row justify-content-evenly p-4 bg-dark pb-5">
+
+        <!-- <div class="motorcycle-container d-flex justify-content-evenly">
           <a href="index.html"
             ><img
               class="Harley-Davidson"
@@ -205,17 +222,9 @@
               width="200px"
             />
           </a>
-          <!-- <p class="text-danger fw-bold text-wrap">
-              Harley-Davidson XLCH Sportster
-            </p> -->
-          <!-- <div class="topSpeed1-para1">
-            <p class="topSpeed1 text-danger fs-3 bg-white">
-              Top Speed - 122 mph (196 km/h)
-            </p>
-          </div> -->
-        </div>
+        </div> -->
 
-        <div class="container-3 d-flex flex-column justify-content-evenly">
+        <!-- <div class="motorcycle-container d-flex justify-content-evenly">
           <a href="index.html"
             ><img
               class="kawasaki"
@@ -225,9 +234,11 @@
               width="200px"
             />
           </a>
-          <!-- <p class="kawasaki-1 text-white fw-bold text-center fs-3">
-              Kawasaki Ninja ZX-11
-            </p>
+        </div> -->
+
+<!--       homepage -->
+        <div class="drop-container text-center">
+          <p class="text-3 text-warning">Safety First</p>
 
           <div class="topSpeed2-para2">
             <p class="topSpeed2 text-danger fs-3 bg-white">
@@ -238,6 +249,7 @@
 
         <div class="motorcycle-container text-center">
           <p class="text-3 text-warning fw-bold">Safety First</p>
+<!--        main -->
           <div
             id="dropZone"
             class="drop-zone bg-white"
@@ -245,13 +257,9 @@
             ondrop="drop(event)"
             style="width: 150px; height: 150px"
           ></div>
-          <!-- <div class="drop-zone" ondragover=" allowDrop(event)" ondrop=" drop(event)" >
-          </div> -->
         </div>
 
-        <div
-          class="motorcycle-container d-flex flex-column justify-content-center"
-        >
+        <!-- <div class="motorcycle-container d-flex justify-content-evenly">
           <a href="index.html"
             ><img
               class="suzuki"
@@ -260,19 +268,9 @@
               height="200px"
               width="200px"
           /></a>
+        </div> -->
 
-          <!-- <p class="suziki-3 text-white fw-bold text-center fs-3">
-              Suzuki Hayabusa (first generation)
-            </p>
-
-          <div>
-            <p class="topSpeed3-para3">Top Speed - 188 - 194 mph (303 - 312 km/h)</p>
-          </div> -->
-        </div>
-
-        <div
-          class="motorcycle-container d-flex flex-column justify-content-evenly"
-        >
+        <!-- <div class="motorcycle-container d-flex justify-content-evenly">
           <a href="index.html">
             <img
               class="ducati"
@@ -281,15 +279,8 @@
               height="200px"
               width="200px"
           /></a>
-          <!-- <div>
-            <p class="ducati-1 text-white fw-bold text-center fs-3 align-items-center">
-              Ducati Panigale R
-            </p>
-        </div>
-
-            <div class="topSpeed4-4">
-            <p class="topSpeed4-para4 text-white text-center">Top Speed - 202 mph (325 km/h)</p>
-            </div> -->
+        </div> -->
+ 
         </div>
       </div>
     </div>
@@ -306,5 +297,11 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script>
+    let tool = document.querySelector('.tooltips')
+      let tooltip = new bootstrap.Tooltip(tool, {
+        boundary: document.querySelector('.drop-zone') // or document.querySelector('#boundary')
+      })
+      </script>
   </body>
 </html>

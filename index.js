@@ -1,19 +1,5 @@
 //https://codepen.io/Amr_Saker/pen/NWKgxLv
 
-// let helmet;
-// let image = document.getElementsByClassName(".helmet");
-
-// function allowDrop(eve) {
-//     eve.preventDefault() ;
-// }
-// function DragStart(eve) {
-//   image = eve.target.class ;
-// }
-
-// function drop(eve){
-//     eve.target.append(document.querySelector(".dropzone"))
-// }
-
 let myId;
 let x = document.getElementById(myId);
 
@@ -25,8 +11,87 @@ function DragStart(eve) {
 }
 
 function drop(eve) {
+  eve.preventDefault();
   eve.target.append(document.getElementById(myId));
+  displayMotorcycle();
 }
+// https://codepen.io/Amr_Saker/pen/NWKgxLv
+
+// function allowDrop(e){
+//   e.preventDefault();
+// }
+
+// function drag(e){
+//   e.dataTransfer.setData("text",e.target.id);
+// }
+
+// function drop(e){
+//   e.preventDefault();
+//   var data= e.dataTransfer.getData("text");
+//   e.target.appendChild(document.querySelector("#"+data));
+// }
+
+// let input = document.getElementsByName("div");
+
+let motorcycleInfo = [
+  { 
+  name: "Harley-Davidson",
+  imageUrl: "https://www.webbikeworld.com/wp-content/uploads/2023/01/Davidson2-1521x760.jpg",
+},
+{
+  name: "kawasaki",
+  imageUrl: "https://i.pinimg.com/originals/fd/2a/e8/fd2ae84cc75a10e272ef66f35c8ed0dc.jpg",
+},
+{
+  name: "suzuki",
+  imageUrl: "https://cdn-fastly.motorcycle.com/media/2023/03/30/11414896/suzuki-motorcycles.jpg?size=720x845&nocrop=1",
+},
+{
+  name: "ducati",
+  imageUrl: "https://www.oovango.com/wp-content/uploads/2022/01/Ducati-Streetfighter-V4s-750x504.jpg",
+}
+];
+
+// let motorDiv = document.querySelectorAll(".motorcycle-container");
+// button.addEventListener("click", (e) => {
+  
+//   button.disabled = true; //setting button state to disabled
+//   input.addEventListener("change", stateHandle);
+  
+//   function stateHandle() {
+//       if (document.querySelector(".drop-zone").value === "") {
+//           button.disabled = true; //button remains disabled $('linkID').observe('click', function(event) { event.stop() });
+//       } else {
+//           button.disabled = false; //button is enabled
+//       }
+//   }
+// })
+const motorcycles = document.querySelector(".cycle-container");
+
+function displayMotorcycle() {
+const dropBox = document.querySelector(".drop-container");
+  motorcycleInfo.forEach((motorcycle, index) => {
+    const tempLI = document.createElement("div");
+      tempLI.ClassName = "motorcycle-container d-flex justify-content-evenly";
+      tempLI.innerHTML = `
+      <a href="index.html"
+      ><img
+       class="motorcycle"
+        src="${motorcycle.imageUrl}"
+        alt="${motorcycle.name}"
+        height="200px"
+        width="200px"
+    /></a>`;
+
+    if (index < 2 ){
+      motorcycles.insertBefore(tempLI, dropBox) // https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore
+    } else {
+      motorcycles.appendChild(tempLI)
+    }
+
+  });
+}
+
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
