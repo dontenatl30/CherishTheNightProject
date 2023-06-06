@@ -15,23 +15,6 @@ function drop(eve) {
   eve.target.append(document.getElementById(myId));
   displayMotorcycle();
 }
-// https://codepen.io/Amr_Saker/pen/NWKgxLv
-
-// function allowDrop(e){
-//   e.preventDefault();
-// }
-
-// function drag(e){
-//   e.dataTransfer.setData("text",e.target.id);
-// }
-
-// function drop(e){
-//   e.preventDefault();
-//   var data= e.dataTransfer.getData("text");
-//   e.target.appendChild(document.querySelector("#"+data));
-// }
-
-// let input = document.getElementsByName("div");
 
 let motorcycleInfo = [
   { 
@@ -52,20 +35,7 @@ let motorcycleInfo = [
 }
 ];
 
-// let motorDiv = document.querySelectorAll(".motorcycle-container");
-// button.addEventListener("click", (e) => {
-  
-//   button.disabled = true; //setting button state to disabled
-//   input.addEventListener("change", stateHandle);
-  
-//   function stateHandle() {
-//       if (document.querySelector(".drop-zone").value === "") {
-//           button.disabled = true; //button remains disabled $('linkID').observe('click', function(event) { event.stop() });
-//       } else {
-//           button.disabled = false; //button is enabled
-//       }
-//   }
-// })
+
 const motorcycles = document.querySelector(".cycle-container");
 
 function displayMotorcycle() {
