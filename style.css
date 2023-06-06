@@ -11,6 +11,7 @@
 } */
 .hbDropdown {
   margin-left: 30px;
+  background-color: red;
 }
 
 .invisible {
@@ -223,3 +224,24 @@ margin-bottom: 10px;
   .Directions {
     color: red;
   }
+h3 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#chooseRide {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#takeRideButton {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h5 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#return {
+  padding-left: 60px;
+  padding-right: 70px;
+  align-items: center;
+}

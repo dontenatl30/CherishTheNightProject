@@ -46,8 +46,8 @@ function initMap() {
     }
   });
 
-  // const startFromInput = document.getElementById("startFromInput");
-  // const destinationInput = document.getElementById("destinationInput");
+  const startFromInput = document.getElementById("startFromInput");
+  const destinationInput = document.getElementById("destinationInput");
 
   let startHere = document.querySelector("#startFromInput"); //Event Listener
   let endHere = document.querySelector("#destinationInput"); //Event Listener
